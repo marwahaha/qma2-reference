@@ -19,28 +19,26 @@ But what about the standard class QMA (i.e., when $$k=1$$?) This is still open, 
 
 # QMA(2)-complete problems
 
-### Hamiltonian problem
-
 One natural problem for QMA(2) is the *sparse separable Hamiltonian problem* [[CD10]](https://arxiv.org/pdf/1111.5247.pdf): Decide if there is a separable state that has ground state $$\le a$$, or all states are $$\ge b$$, where $$b-a = \Omega(1/poly(n))$$. This is related to the *sparse Hamiltonian problem*, which is QMA-complete.
 
 One strange result is that both the *k-local Hamiltonian problem* and the *k-local separable Hamiltonian problem* **are QMA-complete**. This means that knowing that the Hamiltonian is a sum of terms operating on only a constant number of qubits, even deciding whether a separable state is of low-energy is possible "without the power of unentanglement".
 
 A natural open question here is: why is there a difference between the *sparse* setting and the *k-local* setting?
 
-### Basis checks and SQMA(2)
-Another
-- [QMA vs SQMA](https://arxiv.org/pdf/1410.2882.pdf)
-
 # Features of QMA(2)
 
-* Scott -- the power of unentanglement (QMA(2) can have very short proofs) (and extensions of this)
-- [QMA(2) and the quantum polynomial hierarchy](https://arxiv.org/pdf/1805.11139.pdf)
+Surprisingly, both QMA and QMA(2) are equal to their "subset state" variants, where the input witness must be a uniform superposition over some subset of basis elements [[GKS16]](https://arxiv.org/pdf/1410.2882.pdf).
 
-Error in QMA(2): strong error reduction // in-place error reduction (it was resolved!)
+Upper bounds for QMA(2) have been hard to track down, except for QMA(2) $$\subseteq$$ NEXP. [[GSSSY18]](https://arxiv.org/pdf/1805.11139.pdf) shows that unless QMA(2) equals the third level of the quantum polynomial hierarchy, QMA(2) $$\subsetneq$$ NEXP.
 
+There are QMA($$k$$) protocols for 3-SAT [[ABDFS08]](https://arxiv.org/pdf/0804.0802.pdf) and 3-coloring [[BT07]](https://arxiv.org/pdf/0709.0738.pdf) (both NP-complete problems) that have sublinear-sized proofs. (Classically, we expect linear-sized proofs by the exponential time hypothesis (ETH)).
+
+There was some problems amplifying success probabilities in QMA(2); something about "strong error reduction" vs "in-place error reduction". But it is now resolved.
+
+Other resources:
 
 - [2016 QuICS Workshop on QMA(2)](http://qma2016.quics.umd.edu/agenda)
-- [Problems slightly harder than QMA](https://ieeexplore.ieee.org/abstract/document/6875473)
+- [On problems slightly harder than QMA (Ambainis)](https://ieeexplore.ieee.org/abstract/document/6875473)
 
 ---
 
