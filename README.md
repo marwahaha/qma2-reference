@@ -1,5 +1,7 @@
 # What is QMA2?
 
+QMA2 is a class where the verifier ("Arthur"), a quantum computer, checks a computation from two unentangled provers ("Merlins"). The verifier receives two unentangled quantum states.
+
 - [QMA2 primer](http://www.billfefferman.com/wp-content/uploads/2016/11/bill-qma2Tutorial.pdf)
 
 ## Why is this important?
@@ -11,6 +13,7 @@
 ## QMA2-complete problems
 
 - [sparse separable vs k-local separable](https://arxiv.org/pdf/1111.5247.pdf)
+
 ## QMA2 vs QMAk
 
 ## QMA vs QMA2
