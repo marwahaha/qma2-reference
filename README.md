@@ -13,10 +13,11 @@ We can imagine a generalization of QMA(2), where we are given $$k$$ quantum stat
 
 It turns out that QMA($$k$$) = QMA(2) [[HM13]](https://arxiv.org/pdf/1001.0017.pdf). Their approach uses the SWAP test (checking that two quantum states are similar); this primitive can be used for any $$k \ge 2$$.
 
-But what about the standard class QMA (i.e., when $$k=1$$?) This is still open, even in the oracle setting:
+But what about the standard class QMA; i.e., when $$k=1$$? This is still open, even in the oracle setting:
 
 **Open problem [[Problem 2, Aaronson 2021]](https://arxiv.org/pdf/2109.06917.pdf)**: Is there any (classical or quantum) oracle $$\mathcal{O}$$ where QMA $$\ne$$ QMA(2)?
 
+It's unlikely that QMA $$=$$ QMA(2), since determining whether a state is entangled or not is at least NP-hard [[Gharibian 2008]](https://arxiv.org/pdf/0810.4507.pdf).
 # QMA(2)-complete problems
 
 One natural problem for QMA(2) is the *sparse separable Hamiltonian problem* [[CD10]](https://arxiv.org/pdf/1111.5247.pdf): Decide if there is a separable state that has ground state $$\le a$$, or all states are $$\ge b$$, where $$b-a = \Omega(1/poly(n))$$. This is related to the *sparse Hamiltonian problem*, which is QMA-complete.
@@ -24,6 +25,8 @@ One natural problem for QMA(2) is the *sparse separable Hamiltonian problem* [[C
 One strange result is that both the *k-local Hamiltonian problem* and the *k-local separable Hamiltonian problem* **are QMA-complete**. This means that knowing that the Hamiltonian is a sum of terms operating on only a constant number of qubits, even deciding whether a separable state is of low-energy is possible "without the power of unentanglement".
 
 A natural open question here is: why is there a difference between the *sparse* setting and the *k-local* setting?
+
+Pure state N-representability is in QMA(2), but may not be QMA(2)-complete [[LCV06]](https://arxiv.org/pdf/quant-ph/0609125.pdf).
 
 # Features of QMA(2)
 
@@ -39,6 +42,9 @@ Other resources:
 
 - [2016 QuICS Workshop on QMA(2)](http://qma2016.quics.umd.edu/agenda)
 - [On problems slightly harder than QMA (Ambainis)](https://ieeexplore.ieee.org/abstract/document/6875473)
+- [[BCY11]](https://dl.acm.org/doi/pdf/10.1145/1993636.1993683) thinks about intermediate classes between QMA and QMA(2)
+- [[KMY01]](https://arxiv.org/pdf/quant-ph/0110006.pdf):  the paper where QMA($$k$$) is defined
+
 
 ---
 
