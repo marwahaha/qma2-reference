@@ -32,7 +32,8 @@ Pure state N-representability is in QMA(2), but may not be QMA(2)-complete [[LCV
 
 Surprisingly, both QMA and QMA(2) are equal to their "subset state" variants, where the input witness must be a uniform superposition over some subset of basis elements [[GKS16]](https://arxiv.org/pdf/1410.2882.pdf).
 
-Upper bounds for QMA(2) have been hard to track down, except for QMA(2) $$\subseteq$$ NEXP. [[GSSSY18]](https://arxiv.org/pdf/1805.11139.pdf) shows that unless QMA(2) equals the third level of the quantum polynomial hierarchy, QMA(2) $$\subsetneq$$ NEXP.
+Upper bounds for QMA(2) have been hard to track down, except for QMA(2) $$\subseteq$$ NEXP. [[GSSSY18]](https://arxiv.org/pdf/1805.11139.pdf) shows that unless QMA(2) equals the third level of the quantum polynomial hierarchy, QMA(2) $$\subsetneq$$ NEXP. [[Ambainis 2014]](https://ieeexplore.ieee.org/abstract/document/6875473) and
+[[GPY19]](https://arxiv.org/pdf/1909.05981.pdf) consider a complete problem for the class $P^{QMA[\log]} = P^{||QMA}$, which contains both $coQMA$ and $QMA$.
 
 There are QMA($$k$$) protocols for 3-SAT [[ABDFS08]](https://arxiv.org/pdf/0804.0802.pdf) and 3-coloring [[BT07]](https://arxiv.org/pdf/0709.0738.pdf) (both NP-complete problems) that have sublinear-sized proofs. (Classically, we expect linear-sized proofs by the exponential time hypothesis (ETH)).
 
@@ -41,7 +42,6 @@ There was some problems amplifying success probabilities in QMA(2); something ab
 Other resources:
 
 - [2016 QuICS Workshop on QMA(2)](http://qma2016.quics.umd.edu/agenda)
-- [On problems slightly harder than QMA (Ambainis)](https://ieeexplore.ieee.org/abstract/document/6875473)
 - [[BCY11]](https://dl.acm.org/doi/pdf/10.1145/1993636.1993683) thinks about intermediate classes between QMA and QMA(2)
 - [[KMY01]](https://arxiv.org/pdf/quant-ph/0110006.pdf):  the paper where QMA($$k$$) is defined
 
