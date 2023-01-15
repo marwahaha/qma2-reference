@@ -56,7 +56,7 @@ Other resources:
 
 There are a few ways I can think of to define classes between QMA and QMA(2):
 1. Consider $$QMA\{e\}$$, where witnesses that have entanglement entropy along a defined bipartition of at most some $$e(n)$$. It's not immediately clear that these classes form a hierarchy; i.e $$QMA\{e'\} \subseteq QMA\{e\}$$ when $$e \le e'$$. Are there phase transitions between $$0 \le e(n) \le poly(n)$$?
-2. Consider $$QMA(2)^{same}$$, where the witnesses are promised to be of the form $$\ket{\psi} \otimes \ket{\psi}$$. Is this as general as $$QMA(2)$$? (Dorian Rudolph suggests a product test to reduce a $$QMA(2)$$ problem into this form.) If so, this makes $$QMA(2)$$ all about the power of *multiple copies*, not *unentanglement*. Perhaps there are connections to a no-cloning theorem.
+2. Consider $$QMA(2)^{same}$$, where the witnesses are promised to be of the form $$|\psi\rangle \otimes \psi\rangle$$. Is this as general as $$QMA(2)$$? (Dorian Rudolph suggests a product test to reduce a $$QMA(2)$$ problem into this form.) If so, this makes $$QMA(2)$$ all about the power of *multiple copies*, not *unentanglement*. Perhaps there are connections to a no-cloning theorem.
 
 
 # Between MA and RE: a graphical perspective
