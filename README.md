@@ -118,5 +118,6 @@ Some natural questions from here are:
 ---
 
 Thanks to Justin Yirka for direction when starting this document.
+The "MA to RE" graphic was inspired by several conversations at ITCS 2023.
 
 More to add? Email me at [kmarw@uchicago.edu](mailto:kmarw@uchicago.edu).
