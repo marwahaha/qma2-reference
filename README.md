@@ -48,7 +48,60 @@ There are a few ways I can think of to define classes between QMA and QMA(2):
 
 # Between MA and RE: a graphical perspective
 
-TODO
+Consider the verifier-prover (Arthur-Merlin) style of protocols, with one prover. There are three *parameters* I can think of:
+1. Is the verifier classical or quantum?
+2. Is the verifier classical or quantum?
+3. How many messages are being sent (prover always goes last)
+
+With a classical verifier and witness:
+* one message: MA
+* two (or any constant number of messages): AM (or IP[const]; private-coin randomness isn't more powerful, by [[GS86]](https://dl.acm.org/doi/pdf/10.1145/12130.12137))
+* super-constant messages: could be more powerful than AM
+* any poly(n) messages: IP = PSPACE
+
+
+With a quantum verifier and *classical* witness:
+* one message: [QCMA](https://complexityzoo.net/Complexity_Zoo:Q#qcma)
+* two messages: QCAM
+* three or more messages: unknown
+* any poly(n) messages: in between IP and QIP, so it's equal to PSPACE.
+
+With a quantum verifier and witness:
+* one message: QMA
+* two messages: [QAM](https://complexityzoo.net/Complexity_Zoo:Q#qam) (public-coin) or QIP[2] (private-coin)
+* three or more messages (up to poly(n)): QIP = PSPACE (by [[KW00]](https://cs.uwaterloo.ca/~watrous/Papers/QuantumInteractiveProofs.pdf))
+
+
+If there are multiple Merlins, it depends also on (4.) how the Merlins are correlated: none, classically, quantumly, or arbitrarily (also called non-signalling). In general, classical correlation is no more powerful than no correlation, and more than 2 Merlins does not change things (but I haven't fully verified all of these claims):
+
+With a classical verifier and witness:
+* one message, regardless of correlation: MA (haven't formally proved this)
+* two or more messages now depends on correlation:
+    * for no or classical correlation, it's MIP[1] (which I think is equal to MIP= NEXP)!
+    * for quantum correlation, it's MIP*[1] (which I think is equal to MIP* = RE)!
+    * for non-signalling, it depends on the number of messages, but with an arbitrary poly(n) messages, it's PSPACE.
+
+Surprisingly, with a quantum verifier and *classical* witness, nothing changes except MA becomes QCMA.
+
+With a quantum verifier and witness:
+* one message now **depends on correlation**:
+    * QMA(2) if no or classical correlation (haven't formally proved this) (!!)
+    * QMA if quantum correlation or no-signalling (haven't formally proved this)
+* two or more messages splits further:
+    * for no or classical correlation, it's QMIP[1] (which I think is equal to MIP= NEXP)!
+    * for quantum correlation, it's QMIP*[1] (which I think is equal to MIP* = RE)!
+    * for non-signalling, it depends on the number of messages, but with an arbitrary poly(n) messages, it's PSPACE.
+
+If you have any references to verify these claims, please let me know.
+
+Some natural questions from here are:
+1. What do we know about QCAM? Is it equal to QCAM[const]?
+2. Is QAM (or even AM) in QMA(2)?
+3. Is there a time-hierarchy theorem about number of rounds for MA-style proofs?
+4. Why is there a symmetry breaking for QMA(2) and QMA when going from one Merlin to multiple Merlins?
+5. What other kinds of correlations are there? What about Signalling MIP*? What about Consensus MIP*? (Look at Mark Braverman's thesis)
+6. What happens when the protocols allow for zero-gap or inverse-exponential-gap on the promises?
+7. What happens when the protocols allow for perfect-completeness (like $$QMA_1$$)?
 
 
 
